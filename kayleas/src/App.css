@@ -53,7 +53,7 @@ body{
 }
 
 .banner{
-  background-image: url(src/assets/fabric-texture.webp);
+  background-image: url(https://cdn.pixilart.com/photos/large/daa0ed0f0ee4be0.png);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -65,7 +65,7 @@ body{
 
 }
 .underbanner{
-  background-image: url(src/assets/bannerlining.png);
+  background-image: url(https://cdn.pixilart.com/photos/large/7932b4e28faf68b.png);
   background-position: center;
   background-size: cover;
   width: 100%;
