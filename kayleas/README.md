@@ -1,8 +1,8 @@
-# React + Vite
+# Kayle's Anique shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+this is a site for kayle and thier Antique shop thats sells everything from chairs to radios
 
-Currently, two official plugins are available:
+filler stuff:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [this website](https://www.youtube.com/watch?v=u-wEeg4YNoY) uses [Html+CSS](https://www.youtube.com/watch?v=u-wEeg4YNoY) for its front end
+- 

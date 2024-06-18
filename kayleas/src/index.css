@@ -11,6 +11,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+#root{
+  margin: 0;
+  padding: 0;
+  max-width: none;
 }
 
 a {
@@ -24,10 +30,10 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  
+  
+  
 }
 
 h1 {
@@ -35,7 +41,7 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+/* button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -45,24 +51,40 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-}
+} */
 button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  /* border-color: #646cff; */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:focus,
+button:focus-visible {
+  /* outline: 4px auto -webkit-focus-ring-color; */
+}
+
+.banner{
+  background-image: url(src/assets/fabric-texture.webp);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 8rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+
+}
+.underbanner{
+  background-image: url(src/assets/bannerlining.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 2rem;
+  background-color: white;
+}
+.siteName{
+  font-family: 'Atthia', sans-serif;
+  font-weight: 100;
+  font-weight: bolder;
+                                                
+                                                
+                                                
 }
