@@ -83,12 +83,6 @@ body{
   height: 2rem;
   background-color: white;
 }
-.siteName{
-  font-family: 'Atthia', sans-serif;
-  padding: 10px;
-  margin: 0;
-  letter-spacing: 4px;                                                
-}
 
 .container{
   display: flex;
@@ -114,4 +108,86 @@ body{
   border-bottom: 2px solid rgb(255, 255, 255);
 }
 
+
+
+
+
+
+/* home page */
+
+.backgroundimg{
+  position: relative;
+  width: 100%;
+  top: 1px;
+  z-index: -1;
+  max-height: 67rem;
+}
+
+.siteName{
+  position: absolute;
+  font-family: 'Atthia', sans-serif;
+  font-weight: bolder;
+  -webkit-text-stroke: 1px black;
+  padding: 10px;
+  margin: 0;
+  letter-spacing: 4px;   
+  left:40%;
+  top: 35rem;   
+  color: rgb(95, 58, 10);                                    
+}
+#nameDeco{
+  position: absolute;
+  top: 32rem;  
+  left: 40rem;
+  width: 40rem;
+  filter: brightness(75%);
+}
+.arrows{
+  margin-bottom: -9rem;
+  background-color: rgba(95, 58, 10, 0.548);
+  border-color: rgba(95, 58, 10, 0.948);
+  border-radius: 5px;
+  border-style: groove;
+}
+.arrows:hover{
+  background-color: rgba(95, 58, 10, 0.948);
+  cursor: pointer;
+}
+
+
+
+
+.featured{
+  position: relative;
+  margin-bottom: -9rem;
+  /* top: -20.9rem;
+  left: 37.6rem; */
+  width: 15rem;
+  height: 8.7rem;
+  overflow: hidden;
+  /* border: solid; */
+}
+.carousel{
+  display: flex;
+    width: fit-content;
+    position: relative;
+    left: 1rem;
+    /* background-color: rgba(44, 27, 5, 0.774);
+    border-radius: 10px; */
+}
+
+.ProductImg-S{
+  max-block-size: 9rem;
+}
+.info-S{
+  background: linear-gradient(0deg, black, transparent);
+  position: relative;
+  top: -4.3rem;
+  width: 14rem;
+
+  
+}
+p{
+  margin:0;
+}
 

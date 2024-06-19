@@ -1,5 +1,6 @@
 
 import * as React from "react";
+import { useState } from 'react';
 import { createRoot } from "react-dom/client";
 import {
   createBrowserRouter,
@@ -12,19 +13,23 @@ import ErrorPage from "./routes/ErrorPage";
 import Home from "./routes/Home";
 import Navbar from "./components/Navbar";
 import Shop from "./routes/Shop";
+import Wares from "./components/Wares";
 
 
 
 const App = () =>{
+  
  
   return(
     <>
     
-      <Navbar/>
-      <Outlet/>
+      <Navbar/> 
+      <Wares/>
     </>
   )
 }
+
+
 
 const router = createBrowserRouter([
   {

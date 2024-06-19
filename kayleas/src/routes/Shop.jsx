@@ -1,3 +1,4 @@
+import SmallProduct from "../components/SmallProduct"
 
 const Shop = () =>{
  
@@ -11,6 +12,7 @@ const Shop = () =>{
             <h1>product showcase</h1>
             <div>
                 <h1> product</h1>
+                <SmallProduct/>
             </div>
 
         </div>
