@@ -164,7 +164,7 @@ body{
   margin-bottom: -9rem;
   /* top: -20.9rem;
   left: 37.6rem; */
-  width: 10rem;
+  width: 9rem;
   height: 8.7rem;
   overflow: hidden;
   /* border: solid; */
@@ -173,7 +173,7 @@ body{
   display: flex;
     width: fit-content;
     position: relative;
-    left: 1rem;
+    left: 0rem;
     /* background-color: rgba(44, 27, 5, 0.774);
     border-radius: 10px; */
 }
