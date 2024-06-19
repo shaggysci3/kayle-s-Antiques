@@ -57,7 +57,7 @@ body{
   background-image: url(https://cdn.pixilart.com/photos/large/daa0ed0f0ee4be0.png);
   background-position: center;
   background-size: cover;
-  width: 1080px;
+  width: 1346px;
   height: 9rem;
   background-color: white;
   display: flex;
@@ -71,7 +71,7 @@ body{
  background-image: url(https://cdn.pixilart.com/photos/large/7932b4e28faf68b.png);
   background-position: center;
   background-size: cover;
-  width: 1080px;
+  width: 1346px;
   height: 0.4rem;
   top: 1.3rem;
   
@@ -80,7 +80,7 @@ body{
   background-image: url(https://cdn.pixilart.com/photos/large/7932b4e28faf68b.png);
   background-position: center;
   background-size: cover;
-  width: 1080px;
+  width: 1346px;
   height: 2rem;
   background-color: white;
 }
@@ -118,7 +118,7 @@ body{
 
 .backgroundimg{
   position: relative;
-    width: 1080px;
+    width: 1346px;
     top: 1px;
     z-index: -1;
     max-height: 67rem;
@@ -133,15 +133,15 @@ body{
     padding: 10px;
     margin: 0;
     letter-spacing: 4px;
-    left: 24.5rem;
+    left: 33rem;
     top: 33rem;
     color: rgb(95, 58, 10);
-    font-size: 23pt;                              
+    font-size: 23pt;
 }
 #nameDeco{
   position: absolute;
     top: 29rem;
-    left: 14rem;
+    left: 22.6rem;
     width: 39rem;
     filter: brightness(75%);
 }
@@ -165,7 +165,7 @@ body{
   margin-bottom: -9rem;
   /* top: -20.9rem;
   left: 37.6rem; */
-  width: 9rem;
+  width: 10rem;
   height: 8.7rem;
   overflow: hidden;
   /* border: solid; */
@@ -186,9 +186,7 @@ body{
   background: linear-gradient(0deg, black, transparent);
   position: relative;
   top: -4.3rem;
-  width: 14rem;
-
-  
+  width: 8rem;
 }
 p{
   margin:0;

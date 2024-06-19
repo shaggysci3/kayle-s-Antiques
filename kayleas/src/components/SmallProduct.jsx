@@ -6,7 +6,7 @@ const SmallProduct = ({img,name}) =>{
 
  const style = { 
     marginRight:"10px",marginLeft:"4px",alignItems:'center',
-    borderRadius:'20px',border:'3px, solid, rgba(95, 58, 10, 0.948)',height:'8.4rem',width:'7.6rem',
+    borderRadius:'20px',border:'3px, solid, rgba(95, 58, 10, 0.948)',height:'8.4rem',width:'9rem',
     overflow:'hidden',backgroundColor:'rgba(95, 58, 10, 0.548)',
   }
   

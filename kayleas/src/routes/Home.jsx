@@ -18,7 +18,7 @@ const Home = () =>{
 
   function handleRightClick(){
     if(count<waresData.length-1){
-      setXPos(xPos-140)
+      setXPos(xPos-163)
       setCount(count+1)
       music.volume = 0.6;
       music.play();
@@ -32,14 +32,14 @@ const Home = () =>{
   }
   function handleLeftClick(){
     if(count>0){
-      setXPos(xPos+140)
+      setXPos(xPos+163)
       setCount(count-1)
       music.volume = 0.6;
       music.play();
       
     }
     else{
-      setXPos(0+((waresData.length-1)* -140))
+      setXPos(0+((waresData.length-1)* -163))
       setCount(waresData.length-1)
       music.volume = 0.6;
     music.play();
@@ -70,7 +70,7 @@ const Home = () =>{
           
       </div>
         
-        <div id="carousel" style={{position:"relative",top:"-21rem",left:"18.7rem", width:"fit-content"}} className="container">
+        <div id="carousel" style={{position:"relative",top:"-21rem",left:"24.7rem", width:"fit-content"}} className="container">
         <button className="arrows" onClick={handleLeftClick}>🢀</button>
           <div className="featured">
             <div style={divStyle} className="carousel">
