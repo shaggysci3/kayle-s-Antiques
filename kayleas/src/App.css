@@ -17,6 +17,7 @@
   margin: 0;
   padding: 0;
   max-width: none;
+  text-align: unset;
 }
 
 a {
@@ -45,7 +46,7 @@ h1 {
   
   margin: 0 auto;
   
-  text-align: center;
+  text-align: unset;
 }
 body{
   display: unset;
