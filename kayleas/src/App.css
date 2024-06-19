@@ -56,7 +56,7 @@ body{
   background-image: url(https://cdn.pixilart.com/photos/large/daa0ed0f0ee4be0.png);
   background-position: center;
   background-size: cover;
-  width: 100%;
+  width: 1900px;
   height: 9rem;
   background-color: white;
   display: flex;
@@ -70,7 +70,7 @@ body{
  background-image: url(https://cdn.pixilart.com/photos/large/7932b4e28faf68b.png);
   background-position: center;
   background-size: cover;
-  width: 100%;
+  width: 1900px;
   height: 0.4rem;
   top: 1.3rem;
   
@@ -79,7 +79,7 @@ body{
   background-image: url(https://cdn.pixilart.com/photos/large/7932b4e28faf68b.png);
   background-position: center;
   background-size: cover;
-  width: 100%;
+  width: 1900px;
   height: 2rem;
   background-color: white;
 }
@@ -117,7 +117,7 @@ body{
 
 .backgroundimg{
   position: relative;
-  width: 100%;
+  width: 1900px;
   top: 1px;
   z-index: -1;
   max-height: 67rem;
@@ -131,14 +131,14 @@ body{
   padding: 10px;
   margin: 0;
   letter-spacing: 4px;   
-  left:40%;
+  left:47rem;
   top: 35rem;   
   color: rgb(95, 58, 10);                                    
 }
 #nameDeco{
   position: absolute;
   top: 32rem;  
-  left: 34%;
+  left:40rem;
   width: 40rem;
   filter: brightness(75%);
 }

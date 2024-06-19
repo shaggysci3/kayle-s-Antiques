@@ -70,7 +70,7 @@ const Home = () =>{
           
       </div>
         
-        <div id="carousel" style={{position:"relative",top:"-21rem",left:"29.7%", width:"fit-content"}} className="container">
+        <div id="carousel" style={{position:"relative",top:"-21rem",left:"35.3rem", width:"fit-content"}} className="container">
         <button className="arrows" onClick={handleLeftClick}>🢀</button>
           <div className="featured">
             <div style={divStyle} className="carousel">
