@@ -121,7 +121,7 @@ body{
     top: 1px;
     z-index: -1;
     max-height: 67rem;
-    left: -26rem;
+    /* left: -26rem; */
 }
 
 .siteName{
