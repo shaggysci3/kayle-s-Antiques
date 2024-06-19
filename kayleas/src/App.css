@@ -138,7 +138,7 @@ body{
 #nameDeco{
   position: absolute;
   top: 32rem;  
-  left: 40rem;
+  left: 34%;
   width: 40rem;
   filter: brightness(75%);
 }
