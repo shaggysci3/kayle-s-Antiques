@@ -45,11 +45,11 @@ const Home = () =>{
     music.play();
     }
   }
-  // useEffect(() => {
-    
-  //   console.log('xPos is: '+xPos);
-  //   console.log('count is: '+count)
-  // }, [xPos]);
+  useEffect(() => {
+    console.log('wares length is'+ waresData)
+    console.log('xPos is: '+xPos);
+    console.log('count is: '+count)
+  }, [xPos]);
 
   const product = waresData.map(ware=>{
     return <SmallProduct key={ware.id} img={ware.img} name={ware.name}/>

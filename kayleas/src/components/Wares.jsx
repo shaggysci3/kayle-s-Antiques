@@ -27,7 +27,7 @@ const Wares = () =>{
       id:"4",
       img:"https://art.pixilart.com/sr22fec27a4daaws3.png",
       name:"druid"
-    },,
+    },
     {
       id:"5",
       img:"https://art.pixilart.com/sr2f33ae501e7aws3.png",
@@ -42,7 +42,7 @@ const Wares = () =>{
       id:"7",
       img:"https://art.pixilart.com/sr22fec27a4daaws3.png",
       name:"druid"
-    },,
+    },
     {
       id:"8",
       img:"https://art.pixilart.com/sr251db88fa39aws3.png",
