@@ -7,6 +7,7 @@ const Shop = () =>{
   const[waresData]=useOutletContext()
   const [isFixed, setIsFixed] = useState(false);
   const [selectedOption, setSelectedOption] = useState('');
+  const [selectedOptionTwo, setSelectedOptionTwo] = useState('');
   
 
 
@@ -32,24 +33,32 @@ const Shop = () =>{
 
   function handleChange(e){
     setSelectedOption(e.target.value);
-
+  }
+  function handleChangeTwo(e){
+    setSelectedOptionTwo(e.target.value);
   }
 
  
     return(
       <>
       <div className="verticalContainer" >
+        
         <div className="verticalContainer">
-        </div>
-        <div className="verticalContainer">
-            <h1>product showcase</h1>
-        <div className={`relative-div ${isFixed ? 'fixed' : ''}`} id="stickyDiv">
-        I become fixed after scrolling!
-        <select value={selectedOption} onChange={handleChange}>
-          <option value="">--Please Select a Filter--</option>
-          <option value="mostPopular">Most Popular</option>
-          <option value="">Most Popular</option>
+            <h1 >product showcase</h1>
+        <div className={`sticky-div ${isFixed ? 'fixed' : ''}`} id="stickyDiv">
+        Filters
+        <div className="container">
+          <select className="selectBox" value={selectedOption} onChange={handleChangeTwo}>
+          <option value="">--Price $--</option>
+          <option value="mostPopular">high to low</option>
+          <option value="">low to high</option>
         </select>
+        <select className="selectBox" value={selectedOptionTwo} onChange={handleChangeTwo}>
+          <option value="">--Likes--</option>
+          <option value="mostPopular">high to low</option>
+          <option value="">low to high</option>
+        </select>
+        </div>
       </div>
             <div className="gridContainer">
                 

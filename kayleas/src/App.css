@@ -101,10 +101,10 @@ body{
   padding: 10px;
   column-gap: 50px;
   row-gap: 50px;
-  background-color: #ffffff;  
+  /* background-color: #ffffff;   */
 }
 .imgContainer{
-  background-color: rgba(0, 0, 0, 0.548);
+  background-color: rgba(100, 100, 100, 100.148);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -229,7 +229,7 @@ p{
 }
 
 
-.relative-div {
+.sticky-div {
   position: relative; /* Initially relative */
   width: 100%; /* Full width */
   background-color: #242424; /* Background color */
@@ -237,6 +237,9 @@ p{
   padding: 10px; /* Padding inside the div */
   /* transition: all 0.3s ease;  */
   height: 50px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
 }
 
 .fixed {
@@ -276,4 +279,12 @@ p{
 .productInfo{
 
 }
+
+.selectBox {
+  position: relative; /* Ensure the parent container is relatively positioned */
+  border-radius: 10px;
+  height: 30px;
+  width: fit-content;
+}
+
 
