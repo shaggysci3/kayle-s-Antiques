@@ -30,13 +30,13 @@ const Wares = () =>{
     },,
     {
       id:"5",
-      img:"https://art.pixilart.com/sr251db88fa39aws3.png",
-      name:"saxophone"
+      img:"https://art.pixilart.com/sr2f33ae501e7aws3.png",
+      name:"apple"
     },
     {
       id:"6",
-      img:"https://cdn.pixilart.com/photos/large/529e437ee65603e.png",
-      name:"seregios"
+      img:"https://art.pixilart.com/sr28c18fb94f3aws3.png",
+      name:"scoll"
     },
     {
       id:"7",
