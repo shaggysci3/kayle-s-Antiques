@@ -15,6 +15,7 @@ import Navbar from "./components/Navbar";
 import Shop from "./routes/Shop";
 import Wares from "./components/Wares";
 import Footer from "./components/Footer";
+import StoreItem from "./components/StoreItem";
 
 
 
@@ -47,7 +48,10 @@ const router = createBrowserRouter([
       },{
         path:"/Shop",
         element:<Shop/>
-      }
+      },{
+        path:"/Item/:id",
+        element:<StoreItem/>
+      },
       
       
       

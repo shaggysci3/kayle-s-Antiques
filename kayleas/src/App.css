@@ -1,7 +1,7 @@
 :root {
  
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* background-color: #242424; */
 
   font-synthesis: none;
   
@@ -104,7 +104,7 @@ body{
   /* background-color: #ffffff;   */
 }
 .imgContainer{
-  background-color: rgba(100, 100, 100, 0.6);
+  background-color: rgba(241, 241, 241, 0.911);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -232,7 +232,7 @@ p{
 .sticky-div {
   position: relative; /* Initially relative */
   width: 100%; /* Full width */
-  background-color: #242424; /* Background color */
+  background-color: white; /* Background color */
   color: white; /* Text color */
   padding: 10px; /* Padding inside the div */
   /* transition: all 0.3s ease;  */
@@ -265,18 +265,16 @@ p{
   margin-left:4px;
   align-items:center;
   border-radius:7px;
-  border:3px solid rgba(0, 0, 0, 0.948);
+  border:2px solid rgba(204, 204, 204, 0.948);
   height: 32rem;
   width: 19rem;
   overflow:hidden;
-  background-color:rgba(0, 0, 0, 0.548);
+  background-color:rgb(255, 255, 255);
+  color: black;
 }
 
 .ProductImg{
   max-block-size: 16rem;
-
-}
-.productInfo{
 
 }
 
@@ -286,5 +284,32 @@ p{
   height: 30px;
   width: fit-content;
 }
+/* product display page */
+
+.productPage{
+  display: flex;
+  width: 1346px;
+  flex-direction: column;
+}
 
 
+.topContainer{
+  display: flex;
+  border: solid black;
+}
+.displayImg{
+  padding: 30px;
+  max-block-size: 50rem;
+  border: solid rgb(43, 255, 0);
+}
+
+.displayInfo{
+  border: solid rgb(255, 0, 0);
+}
+.reviews{
+  height: 10rem;
+  border: solid rgb(0, 102, 255);
+}
+.purchase{
+  border: solid black;
+}

@@ -28,7 +28,7 @@ const Shop = () =>{
   }, []);
 
   const product = waresData.map(ware=>{
-    return <Product key={ware.id} img={ware.img} name={ware.name}/>
+    return <Product key={ware.id} img={ware.img} name={ware.name} id={ware.id}/>
   })
 
   function handleChange(e){
