@@ -61,16 +61,17 @@ const Home = () =>{
 
     return(
       <>
-      
-      
+      <div style={{height:"0"}}>
+
         <h1 className="siteName">Kayle's Antques</h1>
       <img id="nameDeco" src="https://cdn.pixilart.com/photos/large/e314d63de589228.png"></img>
+      </div>
         <img className="backgroundimg" src="https://th.bing.com/th/id/OIG1.dVMEE11ShOSZxXDiixEH?pid=ImgGn"></img>
       <div className="sign" >
           
       </div>
         
-        <div id="carousel" style={{position:"relative",top:"-21rem",left:"24.7rem", width:"fit-content"}} className="container">
+        <div id="carousel" style={{position:"relative",top:"-21rem",left:"-10.3rem", width:"fit-content"}} className="container">
         <button className="arrows" onClick={handleLeftClick}>🢀</button>
           <div className="featured">
             <div style={divStyle} className="carousel">

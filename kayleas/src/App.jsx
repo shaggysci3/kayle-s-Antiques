@@ -14,6 +14,7 @@ import Home from "./routes/Home";
 import Navbar from "./components/Navbar";
 import Shop from "./routes/Shop";
 import Wares from "./components/Wares";
+import Footer from "./components/Footer";
 
 
 
@@ -22,9 +23,11 @@ const App = () =>{
  
   return(
     <>
-    
+    <div className="siteContainer">
       <Navbar/> 
       <Wares/>
+      <Footer/>
+    </div>
     </>
   )
 }

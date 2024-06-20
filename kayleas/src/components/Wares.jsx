@@ -27,6 +27,36 @@ const Wares = () =>{
       id:"4",
       img:"https://art.pixilart.com/sr22fec27a4daaws3.png",
       name:"druid"
+    },,
+    {
+      id:"5",
+      img:"https://art.pixilart.com/sr251db88fa39aws3.png",
+      name:"saxophone"
+    },
+    {
+      id:"6",
+      img:"https://cdn.pixilart.com/photos/large/529e437ee65603e.png",
+      name:"seregios"
+    },
+    {
+      id:"7",
+      img:"https://art.pixilart.com/sr22fec27a4daaws3.png",
+      name:"druid"
+    },,
+    {
+      id:"8",
+      img:"https://art.pixilart.com/sr251db88fa39aws3.png",
+      name:"saxophone"
+    },
+    {
+      id:"9",
+      img:"https://cdn.pixilart.com/photos/large/529e437ee65603e.png",
+      name:"seregios"
+    },
+    {
+      id:"10",
+      img:"https://art.pixilart.com/sr22fec27a4daaws3.png",
+      name:"druid"
     },
   ])
     return(
