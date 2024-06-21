@@ -18,7 +18,7 @@ const Home = () =>{
 
   function handleRightClick(){
     if(count<waresData.length-1){
-      setXPos(xPos-163)
+      setXPos(xPos-164)
       setCount(count+1)
       music.volume = 0.6;
       music.play();
@@ -32,14 +32,14 @@ const Home = () =>{
   }
   function handleLeftClick(){
     if(count>0){
-      setXPos(xPos+163)
+      setXPos(xPos+164)
       setCount(count-1)
       music.volume = 0.6;
       music.play();
       
     }
     else{
-      setXPos(0+((waresData.length-1)* -163))
+      setXPos(0+((waresData.length-1)* -164))
       setCount(waresData.length-1)
       music.volume = 0.6;
     music.play();

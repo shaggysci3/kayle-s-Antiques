@@ -48,15 +48,15 @@ const Shop = () =>{
         <div className={`sticky-div ${isFixed ? 'fixed' : ''}`} id="stickyDiv">
         Filters
         <div className="container">
-          <select className="selectBox" value={selectedOption} onChange={handleChangeTwo}>
+          <select className="selectBox" value={selectedOption} onChange={handleChange}>
           <option value="">--Price $--</option>
-          <option value="mostPopular">high to low</option>
-          <option value="">low to high</option>
+          <option value="priceHigh">high to low</option>
+          <option value="priceLow">low to high</option>
         </select>
         <select className="selectBox" value={selectedOptionTwo} onChange={handleChangeTwo}>
           <option value="">--Likes--</option>
-          <option value="mostPopular">high to low</option>
-          <option value="">low to high</option>
+          <option value="LikesHigh">high to low</option>
+          <option value="LikesLow">low to high</option>
         </select>
         </div>
       </div>
