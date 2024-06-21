@@ -14,7 +14,7 @@ const Wares = () =>{
       name:"chair",
       price:60,
       info:"this is a really nice chair much comfy very fun",
-      stars:[5,4,2],
+      stars:[5,4,5],
     },
     {
       id:"2",
@@ -30,7 +30,7 @@ const Wares = () =>{
       name:"seregios",
       price:170,
       info:"this is a really nice chair much comfy very fun",
-      stars:[5,4,2],
+      stars:[5,5,5],
     },
     {
       id:"4",
