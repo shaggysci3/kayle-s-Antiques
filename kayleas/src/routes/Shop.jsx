@@ -13,7 +13,7 @@ const Shop = () =>{
 
 
   const handleScroll = () => {
-    const stickyPoint = 300; // Adjust this value to the scroll point you want
+    const stickyPoint = 190; // Adjust this value to the scroll point you want
     if (window.scrollY > stickyPoint) {
       setIsFixed(true);
     } else {
@@ -63,7 +63,7 @@ const Shop = () =>{
     setSorted(sortedData);
   }
   const product = sorted.map(ware=>{
-    return <Product key={ware.id} img={ware.img} name={ware.name} id={ware.id} price={ware.price}/>
+    return <Product key={ware.id} img={ware.img} name={ware.name} id={ware.id} price={ware.price} info={ware.info} stars={ware.stars}/>
   })
   
  
@@ -72,7 +72,8 @@ const Shop = () =>{
       <div className="verticalContainer" >
         
         <div className="verticalContainer">
-            <h1 >product showcase</h1>
+          
+            {/* <h1 >product showcase</h1> */}
             {/* <button onClick={handleSortClick}>print sorted Data</button> */}
         <div className={`sticky-div ${isFixed ? 'fixed' : ''}`} id="stickyDiv">
         Filters

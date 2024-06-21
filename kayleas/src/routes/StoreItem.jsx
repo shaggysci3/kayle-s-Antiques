@@ -31,6 +31,9 @@ const StoreItem = () =>{
                 <p>this is a description that will be in the wares file that holds all of the data that the seller wants</p>
                 </div>
                 <div className="purchase">
+                  <div className="purchaseItem">
+                    <p>Add to Cart</p>
+                  </div>
                     
                 </div>
             </div>
