@@ -31,14 +31,14 @@ const Product = ({img,name,id,price,info,stars}) =>{
     return(
       <>
       <div className="productCard" >
-        <div className="infoCard" >
+        <div className="infoCard" onClick={handleClick}>
 
         <div className="imgContainer">
             <img className="ProductImg"  src={img}></img>
         </div>
         
-        <div className="productName" >
-      <button style={{zIndex:'10'}} onClick={handleStarClick}>find stars</button>
+        <div className="productName"  >
+      {/* <button style={{zIndex:'10'}} onClick={handleStarClick}>find stars</button> */}
           <h2>{name}</h2>
           <p className="productInfo">{info}</p>
           <div style={{justifyContent:"space-between"}} className="container">
