@@ -24,7 +24,8 @@ const Product = ({img,name,id,price,info,stars}) =>{
   width:`${trueStars*30}px`
  }
  const emptyStyle ={
-  width:`${150-trueStars*30}px`
+  width:`${150-trueStars*30}px`,
+  backgroundPositionX:`${(150-trueStars*30)-30}px`
  }
 
     return(

@@ -38,7 +38,7 @@ const Wares = () =>{
       name:"druid",
       price:20,
       info:"this is a really nice chair much comfy very fun",
-      stars:[5,4,2],
+      stars:[4,4,4],
     },
     {
       id:"5",
@@ -46,7 +46,7 @@ const Wares = () =>{
       name:"apple",
       price:100,
       info:"this is a really nice chair much comfy very fun",
-      stars:[5,4,2],
+      stars:[0,0,0],
     },
     {
       id:"6",

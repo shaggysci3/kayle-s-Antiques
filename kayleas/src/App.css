@@ -377,7 +377,7 @@ background:rgba(204, 204, 204, 0.948);
   background-repeat: repeat-x;
   background-size: 30px;
   background-image: url(https://img.icons8.com/?size=100&id=tAfqdu2AVpjT&format=png&color=FAB005);
-  background-position-x: 10px;
+  /* background-position-x: 10px; */
   height: 30px;
 }
 .starContainer{
