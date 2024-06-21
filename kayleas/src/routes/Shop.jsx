@@ -8,6 +8,7 @@ const Shop = () =>{
   const [isFixed, setIsFixed] = useState(false);
   const [selectedOption, setSelectedOption] = useState('');
   const [selectedOptionTwo, setSelectedOptionTwo] = useState('');
+  const[sorted,setSorted]=useState(structuredClone(waresData))
   
 
 
@@ -27,17 +28,44 @@ const Shop = () =>{
     };
   }, []);
 
-  const product = waresData.map(ware=>{
-    return <Product key={ware.id} img={ware.img} name={ware.name} id={ware.id}/>
-  })
-
+  
   function handleChange(e){
     setSelectedOption(e.target.value);
+    const sortedPrices = structuredClone(waresData);
+
+    switch (e.target.value){
+      case "priceHigh":
+        const sortedHigh = sortedPrices.sort(function(a, b){
+          return parseFloat(a.price) - parseFloat(b.price);
+        });
+        setSorted(sortedHigh);
+        break;
+      case "priceLow":
+        const sortedLow = sortedPrices.sort(function(a, b){
+          return  parseFloat(b.price) - parseFloat(a.price);
+        });
+        setSorted(sortedLow);
+        break;
+      default:
+        setSorted(waresData);
+
+
+    }
   }
   function handleChangeTwo(e){
     setSelectedOptionTwo(e.target.value);
   }
-
+  function handleSortClick(){
+    const sortedPrices = structuredClone(waresData);
+    const sortedData = sortedPrices.sort(function(a, b){
+      return parseFloat(a.price) - parseFloat(b.price);
+    });
+    setSorted(sortedData);
+  }
+  const product = sorted.map(ware=>{
+    return <Product key={ware.id} img={ware.img} name={ware.name} id={ware.id} price={ware.price}/>
+  })
+  
  
     return(
       <>
@@ -45,6 +73,7 @@ const Shop = () =>{
         
         <div className="verticalContainer">
             <h1 >product showcase</h1>
+            {/* <button onClick={handleSortClick}>print sorted Data</button> */}
         <div className={`sticky-div ${isFixed ? 'fixed' : ''}`} id="stickyDiv">
         Filters
         <div className="container">

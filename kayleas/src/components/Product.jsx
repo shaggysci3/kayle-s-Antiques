@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Navigate, useNavigate } from "react-router";
 
-const Product = ({img,name,id}) =>{
+const Product = ({img,name,id,price}) =>{
  const[isHovered,setIsHovered] = useState(false);
  const[showInfo,setShowInfo] =useState(false);
  const navigate = useNavigate()
@@ -25,6 +25,7 @@ const Product = ({img,name,id}) =>{
         
         <div className="productName">
           <h2>{name}</h2>
+          <h3>{price}$</h3>
           <p className="productInfo"></p>
         </div>
       

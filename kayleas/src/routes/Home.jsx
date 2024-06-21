@@ -5,9 +5,9 @@ import { useEffect, useState } from "react"
 
 const Home = () =>{
   const[waresData]=useOutletContext()
-
   const[xPos,setXPos]=useState(0)
   const[count,setCount]=useState(0)
+  const[sorted,setSorted]=useState(structuredClone(waresData))
   
 
   const divStyle = {
@@ -50,18 +50,29 @@ const Home = () =>{
     console.log('xPos is: '+xPos);
     console.log('count is: '+count)
   }, [xPos]);
-
-  const product = waresData.map(ware=>{
+  
+  
+  
+  function handleSortClick(){
+    console.log(waresData)
+    const sortedPrices = structuredClone(waresData)
+    const sortedData = sortedPrices.sort(function(a, b){
+      return parseFloat(a.price) - parseFloat(b.price);
+    });
+    setSorted(sortedData);
+    
+  }
+  
+  const product = sorted.map(ware=>{
     return <SmallProduct key={ware.id} img={ware.img} name={ware.name}/>
   })
-
-  
 
 
 
     return(
       <>
       <div style={{height:"0"}}>
+        {/* <button onClick={handleSortClick}>click me</button> */}
 
         <h1 className="siteName">Kayle's Antques</h1>
       <img id="nameDeco" src="https://cdn.pixilart.com/photos/large/e314d63de589228.png"></img>
