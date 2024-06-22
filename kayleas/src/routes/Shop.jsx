@@ -96,6 +96,7 @@ const Shop = () =>{
     return <Product key={ware.id} img={ware.img} name={ware.name} id={ware.id} price={ware.price} info={ware.info} stars={ware.stars}/>
   })
   
+  
  
     return(
       <>
