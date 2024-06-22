@@ -384,3 +384,19 @@ background:rgba(204, 204, 204, 0.948);
   display: flex;
 
 }
+.cartLink{
+  scale: 60%;
+  top: -30px;
+  position: relative;
+}
+.cartNumber{
+  scale: 80%;
+  background-color: rgb(196, 4, 4);
+  text-align: center;
+  width: 50px;
+  color: white;
+  border-radius: 40px;
+  position: relative;
+  left: 25px;
+  top: 75px;
+}

@@ -15,6 +15,14 @@ const StoreItem = () =>{
    const style ={color:'black'
 
    }
+   function handlePurchase(){
+     const cart = sessionStorage.getItem('token')
+     let addToCart = cart ? JSON.parse(cart) : [] ;
+     addToCart.push(filteredProducts[0])
+     sessionStorage.setItem('token', JSON.stringify(addToCart))
+     console.log(sessionStorage.getItem('token'))
+     
+   }
    
 
     return(
@@ -31,7 +39,7 @@ const StoreItem = () =>{
                 <p>this is a description that will be in the wares file that holds all of the data that the seller wants</p>
                 </div>
                 <div className="purchase">
-                  <div className="purchaseItem">
+                  <div className="purchaseItem" onClick={handlePurchase}>
                     <p>Add to Cart</p>
                   </div>
                     

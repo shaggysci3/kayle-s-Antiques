@@ -16,10 +16,12 @@ import Shop from "./routes/Shop";
 import Wares from "./components/Wares";
 import Footer from "./components/Footer";
 import StoreItem from "./routes/StoreItem";
+import Cart from "./routes/Cart";
 
 
 
 const App = () =>{
+  
   
  
   return(
@@ -51,7 +53,10 @@ const router = createBrowserRouter([
       },{
         path:"/Item/:id",
         element:<StoreItem/>
-      },
+      },{
+        path:"/Cart",
+        element:<Cart/>
+      }
       
       
       

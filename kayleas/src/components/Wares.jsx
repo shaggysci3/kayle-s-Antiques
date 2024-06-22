@@ -1,9 +1,14 @@
-import { Outlet } from "react-router"
+import { Outlet, json } from "react-router"
 import SmallProduct from "./SmallProduct"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const Wares = () =>{
+  
+  const [cartData,setCartData]=useState([])
 
+  useEffect(() => {
+    sessionStorage.setItem('token', JSON.stringify(cartData))
+  }, []); 
   // this component is the "server" Data if this website had a back end
 
   const[waresData,setWaresData]= useState([
