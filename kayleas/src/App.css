@@ -57,9 +57,9 @@ body{
 .banner{
   background-image: url(https://cdn.pixilart.com/photos/large/daa0ed0f0ee4be0.png);
   background-position: center;
-  background-size: cover;
+  background-size:auto;
   width: 1346px;
-  height: 9rem;
+  height: 4rem;
   background-color: white;
   display: flex;
   align-items:stretch;
@@ -82,7 +82,7 @@ body{
   background-position: center;
   background-size: cover;
   width: 1346px;
-  height: 2rem;
+  height: 1rem;
   background-color: white;
 }
 
@@ -112,8 +112,12 @@ body{
 
 .navbarLinks{
   color: #ffffff;
-  font-size: 30pt;
-  padding: 10px;
+  font-size: 20pt;
+  padding: 7px;
+  z-index: 2;
+  top: 10px;
+  position: relative;
+
 }
 .navbarLinks:hover{
   border-bottom: solid, #ffffff,;
@@ -124,8 +128,6 @@ body{
 .navbarLinks:focus-visible,.navbarLinks:focus{
   border-bottom: 2px solid rgb(255, 255, 255);
 }
-
-
 
 
 
@@ -175,6 +177,9 @@ body{
 
 
 
+.logo{
+  scale: 55%;
+}
 
 .featured{
   position: relative;
@@ -385,8 +390,8 @@ background:rgba(204, 204, 204, 0.948);
 
 }
 .cartLink{
-  scale: 60%;
-  top: -30px;
+  scale: 40%;
+  top: -13px;
   position: relative;
 }
 .cartNumber{

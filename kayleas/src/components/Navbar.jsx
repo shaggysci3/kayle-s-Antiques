@@ -36,7 +36,7 @@ const Navbar = () => {
                 <div className="banner">
                     <div className="container">
                         <a>
-                            <img src="https://cdn.pixilart.com/photos/large/a0144d9013f5715.png" alt="Logo"></img>
+                            <img className='logo' src="https://cdn.pixilart.com/photos/large/a0144d9013f5715.png" alt="Logo"></img>
                         </a>
                         
                     </div>
