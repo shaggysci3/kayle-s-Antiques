@@ -59,7 +59,7 @@ body{
   background-position: center;
   background-size:auto;
   width: 1346px;
-  height: 4rem;
+  height: 4.5rem;
   background-color: white;
   display: flex;
   align-items:stretch;
@@ -222,7 +222,7 @@ p{
   background-color: rgba(17, 49, 107, 0.795);
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   border-radius: 10px;
   align-items: center;
 }
