@@ -74,7 +74,7 @@ const Home = () =>{
       <div style={{height:"0"}}>
         {/* <button onClick={handleSortClick}>click me</button> */}
 
-        <h1 className="siteName">Kayle's Antques</h1>
+        <h1 className="siteName">Kayle's Antiques</h1>
       <img id="nameDeco" src="https://cdn.pixilart.com/photos/large/e314d63de589228.png"></img>
       </div>
         <img className="backgroundimg" src="https://th.bing.com/th/id/OIG1.dVMEE11ShOSZxXDiixEH?pid=ImgGn"></img>
