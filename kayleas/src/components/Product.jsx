@@ -32,7 +32,8 @@ const Product = ({img,name,id,price,info,stars}) =>{
   let addToCart = cart ? JSON.parse(cart) : [] ;
   addToCart.push({
     name,
-    img
+    img,
+    price
   })
   sessionStorage.setItem('token', JSON.stringify(addToCart))
   console.log(sessionStorage.getItem('token'))

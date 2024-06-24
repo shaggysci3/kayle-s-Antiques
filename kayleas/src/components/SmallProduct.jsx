@@ -20,10 +20,9 @@ const SmallProduct = ({img,name}) =>{
     return(
       <>
       <div
-        className="verticalContainer"
+        className="smallProduct"
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut}
-        style={style}
         >
         
         <img  className="ProductImg-S" src={img}></img>

@@ -1,60 +1,40 @@
 import { useEffect, useState } from "react";
 import SmallProduct from "../components/SmallProduct";
 import io from "socket.io-client";
+import CartProduct from "../components/CartProduct";
 
 const Cart = () => {
-  const cartString = sessionStorage.getItem('token');
-  const [currentCart, setCurrentCart] = useState(JSON.parse(cartString));
+  const getCartFromStorage = () => {
+    const cartString = sessionStorage.getItem('token');
+    return JSON.parse(cartString) || [];
+};
+  const [currentCart, setCurrentCart] = useState(getCartFromStorage);
   const [birds, setBirds] = useState([]);
-  const [socket, setSocket] = useState(null);
-  const [value,setValue]=useState("")
-  const[socketMsg,setSocketMsg]=useState()
-
+  
   useEffect(() => {
-    // Create the WebSocket connection with appropriate options
-    const newSocket = io("https://birds-ub6e.onrender.com", {
-      transports: ['websocket'], // Force WebSocket transport
-      path: "/socket.io", // Ensure the correct path is used if your server has a custom path
-      withCredentials: true // Ensure CORS is correctly handled
-    });
-    setSocket(newSocket);
+    // Handle changes within the same tab by overriding sessionStorage.setItem
+    const originalSetItem = sessionStorage.setItem;
 
-    // Event listeners
-    newSocket.on('connect', () => {
-      console.log('Connected to WebSocket server');
-    });
-
-    newSocket.on('message', (msg) => {
-      console.log('Message received:', msg);
-      setSocketMsg(msg)
-      // Update birds state with incoming messages if needed
-      // setBirds((prevBirds) => [...prevBirds, msg]);
-    });
-
-    newSocket.on('disconnect', () => {
-      console.log('Disconnected from WebSocket server');
-    });
-
-    // Cleanup on component unmount
-    return () => {
-      newSocket.disconnect();
+    sessionStorage.setItem = function(key) {  //add function to setitem that says if key is 'token' update state
+        originalSetItem.apply(this, arguments);
+        if (key === 'token') {
+            setCurrentCart(getCartFromStorage());
+        }
     };
-  }, []);
 
-  const handleClick = () => {
-    console.log(birds);
-    if (socket) {
-      console.log("msg sent")
-      socket.emit('message', `this client says: ${value}`); // Example message
-    } else {
-      console.error('Socket not initialized');
-    }
-  };
+    return () => {
+        sessionStorage.setItem = originalSetItem; // Restore original setItem on unmount
+    };
+}, []); // Empty dependency array ensures this effect runs only once
 
+  
+
+  
+  
   const product = currentCart.map((cart, index) => {
-    return <SmallProduct key={index} img={cart.img} name={cart.name} />;
+    return <CartProduct key={index} img={cart.img} name={cart.name} index={index} price={cart.price}/>;
   });
-
+  
   // Fetch birds from API
   useEffect(() => {
     const fetchBirds = async () => {
@@ -64,17 +44,21 @@ const Cart = () => {
     };
     fetchBirds().catch(console.error);
   }, []);
-
+  
+  function handleClick() {
+    
+   
+  };
   function handleChange(e){
-    setValue(e.target.value)
+    
     
   }
 
   return (
     <div style={{ color: 'black' }}>
-      <h1>This is the cart and the user says {socketMsg}</h1>
+      
       {product}
-      <input onChange={handleChange}></input>
+     
       <button onClick={handleClick}>Click me</button>
     </div>
   );
