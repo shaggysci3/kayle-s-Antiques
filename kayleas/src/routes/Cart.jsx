@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import SmallProduct from "../components/SmallProduct";
 import io from "socket.io-client";
 import CartProduct from "../components/CartProduct";
+import { useOutletContext } from "react-router";
 
 const Cart = () => {
   const getCartFromStorage = () => {
@@ -10,6 +11,7 @@ const Cart = () => {
 };
   const [currentCart, setCurrentCart] = useState(getCartFromStorage);
   const [birds, setBirds] = useState([]);
+  const[waresData,setWaresData,allProducts]=useOutletContext()
   
   useEffect(() => {
     // Handle changes within the same tab by overriding sessionStorage.setItem
@@ -61,9 +63,8 @@ useEffect(() => {
   }, []);
   
   function handleClick() {
-    console.log("product is:"+products[0].name)
+    console.log("product is:"+allProducts[0].name)
     
-   
   };
   function handleChange(e){
     

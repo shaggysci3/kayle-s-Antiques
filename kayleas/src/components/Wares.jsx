@@ -5,6 +5,24 @@ import { useEffect, useState } from "react"
 const Wares = () =>{
   
   const [cartData,setCartData]=useState([])
+  
+  const [allProducts,setAllProducts]=useState();
+    
+  useEffect(() => {
+    console.log(allProducts)
+  }, [allProducts]);
+
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const response = await fetch("https://birds-ub6e.onrender.com/products");
+      const ProductArr = await response.json();
+      setAllProducts(ProductArr);
+      console.log("these are from the database"+ProductArr)
+    };
+    fetchProducts().catch(console.error);
+  }, []);
+
 
   useEffect(() => {
     sessionStorage.setItem('token', JSON.stringify(cartData))
@@ -94,10 +112,12 @@ const Wares = () =>{
       stars:[5,4,2],
     },
   ])
+  //  getting product data
+
     return(
       <>
       
-       <Outlet context={[waresData,setWaresData]}/>
+       <Outlet context={[waresData,setWaresData,allProducts]}/>
       </>
     )
   }
