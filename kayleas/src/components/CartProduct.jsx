@@ -1,39 +1,34 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useOutletContext } from "react-router";
 
 const CartProduct = ({img,name,index,price}) =>{
  const[isHovered,setIsHovered] = useState(false);
  const[showInfo,setShowInfo] =useState(false);
- const [waresData]=useOutletContext()
-
-
-
- function handleDelete(){
-  const cart = sessionStorage.getItem('token')
-  let addToCart = cart ? JSON.parse(cart) : [] ;
-  addToCart.push(filteredProducts[0])
-  sessionStorage.setItem('token', JSON.stringify(addToCart))
-  console.log(sessionStorage.getItem('token'))
+ const [waresData]=useOutletContext();
+ 
+ 
+ function handleClick(){
+   console.log(index)
+   const cart = sessionStorage.getItem('token')
+   let addToCart = cart ? JSON.parse(cart) : [] ;
+   addToCart.splice(index,1)
+   console.log("this is what is left int he car: ",addToCart)
+   sessionStorage.setItem('token', JSON.stringify(addToCart))
+   console.log(sessionStorage.getItem('token'))
+  }
   
-}
-function handleClick(){
-  console.log(index)
-  const cart = sessionStorage.getItem('token')
-  let addToCart = cart ? JSON.parse(cart) : [] ;
-  addToCart.splice(index,1)
-  console.log("this is what is left int he car: ",addToCart)
-  sessionStorage.setItem('token', JSON.stringify(addToCart))
-  console.log(sessionStorage.getItem('token'))
-}
-
-
   
- function handleMouseOver(){
-  setIsHovered(true)
- }
- function handleMouseOut(){
-  setIsHovered(false)
- }
+  
+  function handleMouseOver(){
+    setIsHovered(true)
+  }
+  function handleMouseOut(){
+    setIsHovered(false)
+  }
+  
+  
+  
+
 
     return(
       <>

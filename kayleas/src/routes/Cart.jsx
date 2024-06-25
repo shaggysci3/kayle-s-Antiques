@@ -25,7 +25,22 @@ const Cart = () => {
     return () => {
         sessionStorage.setItem = originalSetItem; // Restore original setItem on unmount
     };
-}, []); // Empty dependency array ensures this effect runs only once
+
+    
+}, []); 
+
+//  getting product data
+const [products,setProducts]=useState();
+  
+useEffect(() => {
+  const fetchProducts = async () => {
+    const response = await fetch("https://birds-ub6e.onrender.com/products");
+    const ProductArr = await response.json();
+    setProducts(ProductArr);
+  };
+  fetchProducts().catch(console.error);
+}, []);
+
 
   
 
@@ -46,6 +61,7 @@ const Cart = () => {
   }, []);
   
   function handleClick() {
+    console.log("product is:"+products[0].name)
     
    
   };
