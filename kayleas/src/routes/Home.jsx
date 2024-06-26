@@ -14,11 +14,11 @@ const Home = () =>{
     transform: `translate(${xPos}px, 0px)`,
     transition: "transform 0.5s ease-in-out",
   };
-  let music = new Audio("public/drawrSound.mp3");
+  let music = new Audio("/drawrSound.mp3");
 
   function handleRightClick(){
     if(count<waresData.length-1){
-      setXPos(xPos-164)
+      setXPos(xPos-163.7)
       setCount(count+1)
       music.volume = 0.6;
       music.play();
@@ -32,14 +32,14 @@ const Home = () =>{
   }
   function handleLeftClick(){
     if(count>0){
-      setXPos(xPos+164)
+      setXPos(xPos+163.7)
       setCount(count-1)
       music.volume = 0.6;
       music.play();
       
     }
     else{
-      setXPos(0+((waresData.length-1)* -164))
+      setXPos(0+((waresData.length-1)* -163.7))
       setCount(waresData.length-1)
       music.volume = 0.6;
     music.play();

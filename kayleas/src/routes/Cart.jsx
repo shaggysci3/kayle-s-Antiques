@@ -3,6 +3,7 @@ import SmallProduct from "../components/SmallProduct";
 import io from "socket.io-client";
 import CartProduct from "../components/CartProduct";
 import { useOutletContext } from "react-router";
+import AddProduct from "../components/AddProduct";
 
 const Cart = () => {
   const getCartFromStorage = () => {
@@ -12,6 +13,7 @@ const Cart = () => {
   const [currentCart, setCurrentCart] = useState(getCartFromStorage);
   const [birds, setBirds] = useState([]);
   const[waresData,setWaresData,allProducts]=useOutletContext()
+  const[show,setShow]=useState(false)
   
   useEffect(() => {
     // Handle changes within the same tab by overriding sessionStorage.setItem
@@ -63,7 +65,7 @@ useEffect(() => {
   }, []);
   
   function handleClick() {
-    console.log("product is:"+allProducts[0].name)
+    setShow(!show)
     
   };
   function handleChange(e){
@@ -76,7 +78,15 @@ useEffect(() => {
       
       {product}
      
-      <button onClick={handleClick}>Click me</button>
+      <button style={show?{visibility:"hidden"}:{visibility:"visible"}} onClick={handleClick}>Sell Item</button>
+      {show ? (
+        <div style={{color:"black"}}>
+          <AddProduct setShow={setShow}/>
+        </div>
+      ) : (
+        <></>
+      )}
+
     </div>
   );
 };
