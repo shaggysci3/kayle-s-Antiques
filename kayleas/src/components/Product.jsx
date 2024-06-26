@@ -54,7 +54,7 @@ const Product = ({img,name,id,price,info,stars}) =>{
           <h2>{name}</h2>
           <p className="productInfo">{info}</p>
           <div style={{justifyContent:"space-between"}} className="container">
-          <h1>{price}$</h1>
+          <h1>${price}</h1>
           {/* <p>{trueStars}</p> */}
           <div className="starContainer">
           <div style={fillStyle} className="starRating"></div>

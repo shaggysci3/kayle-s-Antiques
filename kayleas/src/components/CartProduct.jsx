@@ -43,7 +43,7 @@ const CartProduct = ({img,name,index,price}) =>{
         <img  className="ProductImg-S" src={img}></img>
       </div>
         <h1 className="cartName">{name}</h1>
-        <h2 className="cartPrice">{price}$</h2>
+        <h2 className="cartPrice">${price}</h2>
           </div>
       
         
