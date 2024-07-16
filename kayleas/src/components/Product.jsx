@@ -6,7 +6,7 @@ const Product = ({img,name,id,price,info,stars}) =>{
  const[showInfo,setShowInfo] =useState(false);
  const navigate = useNavigate()
  const trueStars = stars.reduce((a, b) => a + b, 0)/stars.length
-
+// console.log("this is the stars"+stars+" for this product"+name)
 //  const Productstyle = { 
 //     marginRight:"10px",marginLeft:"4px",alignItems:'center',
 //     borderRadius:'20px',border:'3px, solid, rgba(0, 0, 0, 0.948)',height:'8.4rem',width:'9rem',

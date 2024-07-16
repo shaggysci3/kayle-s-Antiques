@@ -66,6 +66,7 @@ useEffect(() => {
   
   function handleClick() {
     setShow(!show)
+    console.log(products)
     
   };
   function handleChange(e){

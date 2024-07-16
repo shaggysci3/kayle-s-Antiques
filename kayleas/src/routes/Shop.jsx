@@ -4,7 +4,7 @@ import Product from "../components/Product"
 import { useEffect, useState } from "react"
 
 const Shop = () =>{
-  const[waresData]=useOutletContext()
+  const[waresData,setWaresData,allProducts]=useOutletContext()
   const [isFixed, setIsFixed] = useState(false);
   const [selectedOption, setSelectedOption] = useState('');
   const [selectedOptionTwo, setSelectedOptionTwo] = useState('');
@@ -89,13 +89,24 @@ const Shop = () =>{
     });
     setSorted(sortedData);
   }
-  useEffect(() => {
-    console.log(sorted)
-  }, [sorted]);
+  // useEffect(() => {
+  //   console.log(sorted)
+  // }, [sorted]);
   const product = sorted.map(ware=>{
     return <Product key={ware.id} img={ware.img} name={ware.name} id={ware.id} price={ware.price} info={ware.info} stars={ware.stars}/>
   })
-  
+  let dbProduct
+  if(allProducts){
+    console.log(allProducts[0].ratings.map(ware=>{
+     return ware.rating
+    }))
+    
+    dbProduct = allProducts.map(ware=>{
+      return <Product key={ware.id} img={ware.img} name={ware.name} id={ware.id} price={ware.price} info={ware.info} stars={ware.ratings.map(ratings=>{
+        return ratings.rating
+      })}/>
+    })
+  }
   
  
     return(
@@ -124,6 +135,8 @@ const Shop = () =>{
             <div className="gridContainer">
                 
                 {product}
+                {dbProduct}
+                
                 
             </div>
 

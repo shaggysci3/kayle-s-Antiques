@@ -8,9 +8,9 @@ const Wares = () =>{
   
   const [allProducts,setAllProducts]=useState();
     
-  useEffect(() => {
-    console.log(allProducts)
-  }, [allProducts]);
+  // useEffect(() => {
+  //   console.log(allProducts)
+  // }, [allProducts]);
 
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const Wares = () =>{
       const response = await fetch("https://birds-ub6e.onrender.com/products");
       const ProductArr = await response.json();
       setAllProducts(ProductArr);
-      console.log("these are from the database"+ProductArr)
+      console.log("this is from the database"+ProductArr[0].ratings)
     };
     fetchProducts().catch(console.error);
   }, []);
